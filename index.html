@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">    
+
+    <style>
+      
+        #color {
+            background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+        }
+        #bgimg {
+            z-index: -1;
+            object-fit: cover;
+        }
+        #footer{
+          background: rgb(248, 248, 248);
+        }
+        #banner {
+            height: calc(100vh - 56px);
+        }
+        .fix-height{
+            height: 10rem;
+            object-fit: cover;
+            
+        }
+        .card{
+          border-radius: 15px;
+          background-size: cover;
+        }
+        .card > img{
+          border-radius: 14px;
+        }
+        .card:hover{
+          transition: all 0.8s ease-in-out;
+          transform: scale(1.1);
+          
+        }
+        .title>span{
+          font-size: 2.5rem;
+          
+        }
+        #popularity div{
+          box-shadow: rgb(28 28 28 / 25%) 0px 1.42623px 2.85246px;
+        }
+        .accordion-item{
+          box-shadow: rgb(28 28 28 / 20%) 0px 1.42623px 2.85246px;
+          border-radius: 5px;
+        }
+        .accordion-header{
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+        .list1{
+          list-style-type: disc;
+          color: grey;
+        }
+        .list1>li>a
+        {
+          text-decoration: none;
+          color: grey;
+        }
+        
+        #font h6{
+          font-weight: lighter;
+        }
+        #font h5{
+          font-weight: normal;
+          color: black;
+        }
+
+      #icon{
+        top: 42%;
+        left: 90%;
+      }
+
+    </style>
+    <title>Tomato !</title>
+</head>
+
+<body style="width: 100%;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="color">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fst-italic text-white" href="#">Tomato</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" aria-current="page" href="#">Invester Relations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Add restraurant</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Log in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid d-flex justify-content-center align-items-center flex-column position-relative div1"
+        id="banner">
+        <h3 class="text-white display-1 fw-bold fst-italic">Tomato</h3>
+        <p class="text-white h3 fw-light">Discover the best food & drinks in Bengaluru</p>
+        <img src="https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png" class="d-block w-100 position-absolute top-0 start-0 h-100" id="bgimg" alt="...">
+        <div class="input-group w-50 input-group-lg mb-3 ">
+            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Bengaluru</button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+        </div>
+
+    </div>
+
+    <div class="container my-4">
+
+        <div class="row g-3">
+
+          <div class="col-md-4">
+
+            <div class="card">
+                <img src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*" class="card-img-top fix-height " alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Order Online</h5>
+                    <p class="card-text text-truncate">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card's content.</p>
+                    
+                </div>
+            </div>
+        </div>
+
+            <div class="col-md-4">
+
+                <div class="card">
+                    <img src="https://b.zmtcdn.com/webFrontend/d026b357feb0d63c997549f6398da8cc1647364915.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*" class="card-img-top fix-height " alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Dinning Out</h5>
+                        <p class="card-text text-truncate">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ">
+
+                <div class="card">
+                    <img src="https://b.zmtcdn.com/webFrontend/d9d80ef91cb552e3fdfadb3d4f4379761647365057.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*" class="card-img-top fix-height" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Nightlifes and Clubs</h5>
+                        <p class="card-text text-truncate">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                       
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <div class="container mt-5">
+        <div class="display-6 fw-bold">Collections</div>
+        <p class="font-italic">Explore curated lists of top restaurants, cafes, pubs, and bars in Pune, based on trends</p>
+
+    </div> -->
+
+    <div class="container ">
+        <div class="row">
+          <h1>Collections</h1>
+          <p class="font-Okra,Helvetica,sans-serif">Explore curated lists of top restaurants, cafes, pubs, and bars in Mumbai, based on trends</p>
+        </div>
+        <div class="row g-3">
+
+            <div class="col-md-6 col-lg-3 position-relative">
+              <div class="position-absolute bottom-0 m-2" >
+                  <h1 class="fs-5 text-white">Newly Opened</h1>
+                  <h6 class="text-white">41 Places</h6>
+              </div>
+                <img src="https://b.zmtcdn.com/data/collections/031c2dd47d839ff2bf98dbb66147ab4f_1648708863.jpg?output-format=webp" class="w-100 rounded" alt="">
+            </div>
+
+
+            <div class="col-md-6 col-lg-3 position-relative">
+              <div class="position-absolute bottom-0 m-2" >
+                <h1 class="fs-5 text-white">Best Of Mumbai</h1>
+                <h6 class="text-white">175 Places</h6>
+              </div>
+                <img src="https://b.zmtcdn.com/data/collections/28d243a9d5e5874fefa0f058f28555dd_1615460077.jpg?output-format=webp" class="w-100 rounded" alt="">
+            </div>
+
+
+            <div class="col-md-6 col-lg-3 position-relative">
+              <div class="position-absolute bottom-0 m-2" >
+                <h1 class="fs-5 text-white">Trending This Week</h1>
+                <h6 class="text-white">30 Places</h6>
+              </div>
+                <img src="https://b.zmtcdn.com/data/collections/9ccef9485579ac79ad8cd10c4c46dd13_1647261373.jpg?output-format=webp" class="w-100 rounded" alt="">
+            </div>
+
+
+            <div class=" col-lg-3 col-md-6 position-relative">
+              <div class="position-absolute bottom-0 m-2" >
+                <h1 class="fs-5 text-white">Work Friendly Places!</h1>
+                <h6 class="text-white">28 Places</h6>
+            </div>
+                <img src="https://b.zmtcdn.com/data/collections/f60eb469dbcdadaaa48c8be4f5ba48b3_1646040548.png?output-format=webp" class="w-100 rounded"  alt="">
+            </div>
+        </div>
+    </div>
+
+     
+    
+      
+    <div class="container mt-5">
+      <div class="row display-6">
+        <div class="col">Popular localities in and around Mumbai</div>
+      </div>
+      <div class="row mt-3">
+          <div class="col-lg-4 col-md-6" id="popularity">
+            <div class="alert alert-light " id="font" >
+              <h5 >Lower Parel</h5>
+              <i class="bi bi-caret-right-fill position-absolute top-3" id="icon"></i>
+              <h6>743 Places</h6>
+            
+            </div>
+            
+          </div>
+          <div class="col-lg-4 col-md-6" id="popularity">
+            <div class="alert alert-light" id="font">
+              <h5>Powai</h5>
+              <i class="bi bi-caret-right-fill position-absolute top-3" id="icon"></i>
+              <h6>908 Places</h6>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" id="popularity">
+            <div class="alert alert-light" id="font">
+              <h5>Malad West</h5>
+              <i class="bi bi-caret-right-fill position-absolute top-3" id="icon"></i>
+              <h6>1788 Places</h6>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" id="popularity">
+            <div class="alert alert-light" id="font">
+              <h5>Borali West</h5>
+              <i class="bi bi-caret-right-fill position-absolute top-3" id="icon"></i>
+              <h6>1119 Places</h6>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" id="popularity">
+            <div class="alert alert-light" id="font">
+              <h5>Bandra Kurla Complex</h5>
+              <i class="bi bi-caret-right-fill position-absolute top-3" id="icon"></i>
+              <h6>201</h6>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" id="popularity">
+            <div class="alert alert-light" id="font">
+              <h5>Vashi</h5>
+              <i class="bi bi-caret-right-fill position-absolute top-3" id="icon"></i>
+              <h6>951 Places</h6>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" id="popularity">
+            <div class="alert alert-light" id="font">
+              <h5>Fort</h5>
+              <i class="bi bi-caret-right-fill position-absolute top-3" id="icon"></i>
+              <h6>356 Places</h6>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" id="popularity">
+            <div class="alert alert-light" id="font">
+              <h5>Juhu</h5>
+              <i class="bi bi-caret-right-fill position-absolute top-3" id="icon"></i>
+              <h6 >201 Places</h6>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" id="popularity">
+            <div class="alert alert-light" id="font">
+              <h5>See More</h5>
+              <i class="bi bi-caret-right-fill position-absolute top-3" id="icon"></i>
+              <h6>Places</h6>
+            </div>
+          </div>
+          
+      </div>
+  </div>
+
+   <div class="container-fluid mt-4" style="background-color: rgb(255, 251, 247); min-height: 500px;">
+      <div class="row align-items-center h-100">
+        <div class="col-xl-6 col-md-6 col-sm-6 d-flex justify-content-end m-0">
+          <div>
+            <img src="https://b.zmtcdn.com/data/o2_assets/a500ffc2ab483bc6a550aa635f4e55531648107832.png" alt="" height="350px">
+          </div>
+        </div>
+
+        <div class="col-xl-6 col-md-6 col-sm-6 d">
+          <div>
+            <h1>Get The Zomato App</h1>
+            <h5 class="fw-light mt-4">We will send you a link, open it on your phone to download the app</h5>
+            <div class="form-check form-check-inline mt-4">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label fs-6" for="inlineRadio1">Email</label>
+            </div>
+            <div class="form-check form-check-inline mt-4">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label fs-6" for="inlineRadio2">Phone</label>
+            </div>
+            
+            <form class="row g-3 mt-2">
+              <div class="col-auto w-50">
+                <label for="staticEmail2" class="visually-hidden">Password</label>
+                <input type="password" class="form-control" id="staticEmail2" placeholder="Email">
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-danger mb-3">Share App Link</button>
+              </div>
+            </form>
+
+            <div class="mt-3">
+              <div class="d-inline">
+                <h6 style="color: grey; font-weight: lighter;">Download app from</h6>
+                <img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" alt="" height="40px" width="150px" class="mt-2">
+                <img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" alt="" height="40px" width="150px" class="mt-2">
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+
+
+    <div class="container mt-5">
+      <h2>Explore options near me</h2>
+
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item mt-5">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+              Popular cuisines near me
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+              <div class="row row-cols-4">
+                <div class="col">
+                  <ol class="list1">
+                    <li><a href="#">Bakery Items Near Me</a></li>
+                    <li><a href="#">Beverages Foods Near Me</a></li>
+                    <li><a href="#">Biryani Food Near Me</a></li>
+                    <li><a href="#">Burger Near Me</a></li>
+                    <li><a href="#">Chiness Items Near Me</a></li>
+                  </ol>
+                </div>
+                <div class="col">
+                  <ol class="list1">
+                    <li><a href="#">Desert Food Near Me</a></li>
+                    <li><a href="#">Icecreame Food Near Me</a></li>
+                    <li><a href="#">Kebab Food Near Me</a></li>
+                    <li><a href="#">Maharashtrian Food Near Me</a></li>
+                    <li><a href="#">Momo Food Near Me</a></li>
+                  </ol>
+                </div>
+                <div class="col">
+                  <ol class="list1">
+                    <li><a href="#">Mughlai Food Near Me</a></li>
+                    <li><a href="#">North Indian Food Near Me</a></li>
+                    <li><a href="#">Pizza Food Near Me</a></li>
+                    <li><a href="#">Rolls Food Near Me</a></li>
+                    <li><a href="#">Sandwich Food Near Me</a></li>
+                  </ol>
+                </div>
+                <div class="col">
+                  <ol class="list1">
+                    <li><a href="#"> Sea Food Near Me</a></li>
+                    <li><a href="#"> Shake Food Near Me</a></li>
+                    <li><a href="#"> Street Food Near Me</a></li>
+                    <li><a href="#"> Schiun Food Near Me</a></li>
+                    <li><a href="#"> South Indian Near Me</a></li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mt-4">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+              Popular restaurant types near me
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show " aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body ">
+              <div class="row row-cols-4">
+                <div class="col">
+                  <ol class="list1">
+                    <li><a href="#">Bakeries Near Me</a></li>
+                    <li><a href="#">Bars Near Me</a></li>
+                    <li><a href="#">Beverages Near Me</a></li>
+                    <li><a href="#">Bhojnalay Near Me</a></li>
+                    <li><a href="#">Cafes Items Near Me</a></li>
+                  </ol>
+                </div>
+                <div class="col">
+                  <ol class="list1">
+                    <li><a href="#">Casual Dinning Near Me</a></li>
+                    <li><a href="#">Cocktail Bar Food Near Me</a></li>
+                    <li><a href="#">Clubs Near Me</a></li>
+                    <li><a href="#">Dessert Parlores Near Me</a></li>
+                    <li><a href="#">Wikins Near Me</a></li>
+                  </ol>
+                </div>
+                <div class="col">
+                  <ol class="list1">
+                    <li><a href="#">Dhaba Near Me</a></li>
+                    <li><a href="#">Fine Dinning Food Near Me</a></li>
+                    <li><a href="#">Food Court Near Me</a></li>
+                    <li><a href="#">Kiosk Near Me</a></li>
+                    <li><a href="#">Irani Cafes Food Near Me</a></li>
+                  </ol>
+                </div>
+                <div class="col">
+                  <ol class="list1">
+                    <li><a href="#"> Sweet Shop Near Me</a></li>
+                    <li><a href="#"> Shake Near Me</a></li>
+                    <li><a href="#"> Pubs Near Me</a></li>
+                    <li><a href="#"> Paan Shop Near Me</a></li>
+                    <li><a href="#"> Quick Bites Near Me</a></li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mt-3">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+              Top Restaurant Chains
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+
+              <div class="row row-cols-5 list1">
+                <div class="col">Bikanerwala</div>
+                <div class="col">Burger King</div>
+                <div class="col">Domino's</div>
+                <div class="col">Dunkin Donuts</div>
+                <div class="col">Haldiram's</div>
+              </div>
+
+              <div class="row row-cols-5 list1 mt-3">
+                <div class="col">KFC</div>
+                <div class="col">Krispy Kreme</div>
+                <div class="col">Mcdonald's</div>
+                <div class="col">Pizz Hut</div>
+                <div class="col">Wow!Momos</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mt-3">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+              Cities We Deliver To
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+            <div class="accordion-body">
+              
+              <div class="row row-cols-5 list1">
+                <div class="col">Mumbai</div>
+                <div class="col">Navi Mumbai</div>
+                <div class="col">Delhi NCR</div>
+                <div class="col">Pune</div>
+                <div class="col">Bengluru</div>
+              </div>
+
+              <div class="row row-cols-5 list1 mt-3">
+                <div class="col">Kolkata</div>
+                <div class="col">Hydraba</div>
+                <div class="col">Kucknow</div>
+                <div class="col">Chennai</div>
+                <div class="col">Kochi</div>
+              </div>
+
+              <div class="row row-cols-5 list1 mt-3">
+                <div class="col">Jaipur</div>
+                <div class="col">Ahemdabad</div>
+                <div class="col">Goa</div>
+                <div class="col"> Nashik</div>
+                <div class="col">Indore</div>
+              </div>
+
+              <div class="row row-cols-5 list1 mt-3">
+                <div class="col">Ooty</div>
+                <div class="col">Shimla</div>
+                <div class="col">Ludiyana</div>
+                <div class="col">Guwahti</div>
+                <div class="col">Amritsar</div>
+              </div>
+
+              <div class="row row-cols-5 list1 mt-3">
+                <div class="col">Kanpur</div>
+                <div class="col">Allahbad</div>
+                <div class="col">Aurangabad</div>
+                <div class="col">Bhopal</div>
+                <div class="col">Ranchi</div>
+              </div>
+
+              <div class="row row-cols-5 list1 mt-3">
+                <div class="col">Nagpur</div>
+                <div class="col">Aagra</div>
+                <div class="col">Dehradun</div>
+                <div class="col">Mysore</div>
+                <div class="col">Rajkot</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid mt-4" id="footer">
+      <footer class="py-5">
+        <div class="row justify-content-around">
+
+          <div class="col-xl-2 col-md-4">
+            <div class="">
+            <h5>ABOUT ZOMATO</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Who We Are</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Work With Us</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Investor Relations</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Report Fund</a></li>
+            </ul>
+            </div>
+          </div>
+    
+          <div class="col-xl-2 col-md-4">
+            <div class="">
+              <h5>ZOMAVERSE</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Zomato</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Feeding India</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Hyperpure</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Zomaland</a></li>
+              
+            </ul>
+            </div>
+          </div>
+    
+          <div class="col-xl-2 col-md-4">
+            <div>
+              <h5>RESTAURANTS</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Partner With Us</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Apps For You</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xl-2 col-md-4">
+            <div>
+              <h5>LEARN MORE</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Security</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Terms</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sitemap</a></li>
+            </ul>
+            </div>
+          </div>
+    
+          <div class="col-xl-2 col-md-4">
+            <div>
+              <h5>Social Link</h5>
+              <ul class="nav flex-column">
+                <a href="#" class="nav-link p-0 text-muted">
+                  <div class="">
+                  <i class="bi bi-linkedin justify-content-center"></i>
+                  <i class="bi bi-instagram"></i>
+                  <i class="bi bi-twitter"></i>
+                  <i class="bi bi-youtube"></i>
+                  <i class="bi bi-facebook"></i>
+                </div>
+                </a>
+                <li class="nav-item mt-3"><a href="#" class="nav-link p-0 text-muted"><img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" alt="" height="30px" width="100px"></a></li>
+                <li class="nav-item mt-3"><a href="#" class="nav-link p-0 text-muted"><img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" alt="" height="30px" width="100px"></a></li>
+              </ul>
+            </div>
+          </div>
+    
+        <div class=" container d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top id="footer"">
+          <p class="fw-light px-5 color">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2022 © Zomato™ Ltd. All rights reserved.</p>
+          
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
